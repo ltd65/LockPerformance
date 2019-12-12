@@ -43,10 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="..\LockPerformance\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
+    <Compile Include="..\LockPerformance\Work.cs">
+      <Link>Work.cs</Link>
+    </Compile>
+    <Compile Include="..\LockPerformance\WorkWithReaderWriterLock.cs">
+      <Link>WorkWithReaderWriterLock.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Work.cs" />
-    <Compile Include="WorkWithReaderWriterLock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
