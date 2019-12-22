@@ -26,7 +26,7 @@ namespace LockPerformance
                 }
             }
             watch.Stop();
-            Console.WriteLine($"Standard Lock needed {watch.ElapsedTicks} ticks.");
+            Console.WriteLine($"Standard Lock needed {watch.Elapsed.TotalMilliseconds} ms.");
 
         }
 
@@ -42,7 +42,7 @@ namespace LockPerformance
                 lockSlim.ExitReadLock();
             }
             watch.Stop();
-            Console.WriteLine($"Slim Read Lock needed {watch.ElapsedTicks} ticks.");
+            Console.WriteLine($"Slim Read Lock needed {watch.Elapsed.TotalMilliseconds} ms.");
         }
 
         public void RunReaderWriterWithWriteLock(long amount)
@@ -57,7 +57,7 @@ namespace LockPerformance
                 lockSlim.ExitWriteLock();
             }
             watch.Stop();
-            Console.WriteLine($"Slim write Lock needed {watch.ElapsedTicks} ticks.");
+            Console.WriteLine($"Slim write Lock needed {watch.Elapsed.TotalMilliseconds} ms.");
 
         }
     }
